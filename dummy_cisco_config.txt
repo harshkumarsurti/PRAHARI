@@ -1,0 +1,16 @@
+! Cisco Catalyst 9300 Example Configuration
+! 
+hostname CORE-SW-NEW
+!
+! Disabling telnet as per CIS benchmarks
+no ip telnet server
+!
+! Enabling SSH Version 2 for secure access
+ip ssh version 2
+!
+! Missing admin access logging! (Will trigger a fail)
+no logging trap
+no logging on
+!
+! Mgmt ACL Configuration
+access-list 10 permit ip any any

@@ -1,0 +1,42 @@
+[
+    {
+        "id": "CIS-1.1",
+        "title": "Disable Insecure Protocols (Telnet)",
+        "framework": "CIS",
+        "version": "1.0",
+        "intent_key": "telnet_disabled",
+        "expected_value": true,
+        "severity": "HIGH",
+        "remediation": "Disable the Telnet server service. Use SSH instead."
+    },
+    {
+        "id": "CIS-1.2",
+        "title": "Enforce Strong SSH Version",
+        "framework": "CIS",
+        "version": "1.0",
+        "intent_key": "ssh_protocol_version",
+        "expected_value": 2,
+        "severity": "HIGH",
+        "remediation": "Configure the device to exclusively accept SSH Protocol Version 2 connections."
+    },
+    {
+        "id": "CIS-3.1",
+        "title": "Admin Access Logging (Syslog)",
+        "framework": "CIS",
+        "version": "1.0",
+        "intent_key": "logging_enabled",
+        "expected_value": true,
+        "severity": "MEDIUM",
+        "remediation": "Enable logging for administrative access and forward logs to a centralized Syslog server."
+    },
+    {
+        "id": "CIS-4.1",
+        "title": "Encrypt Plaintext Passwords",
+        "framework": "CIS",
+        "version": "1.0",
+        "intent_key": "password_encryption",
+        "expected_value": true,
+        "severity": "CRITICAL",
+        "remediation": "Ensure all plaintext passwords stored in the configuration file are encrypted using a strong hashing algorithm."
+    }
+]
